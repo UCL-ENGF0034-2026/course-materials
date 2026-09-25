@@ -1,5 +1,5 @@
-def GCD(a,b):
-    """Compute the GCD of two positive int."""
+def gcd(a: int, b: int) -> int:
+    """Compute the GCD of two positive integers."""
     while a != b:
         if a > b:
             a = a - b
@@ -7,9 +7,17 @@ def GCD(a,b):
             b = b - a
     return a
 
-# Test case for function
-def test_euclid(): 
-    ax = 42                 # Create test case 
-    bx = 30                 # from simple example.
-    r = GCD(ax,bx)          # Turn test print,
-    assert r == 6           # into assert.
+
+GCD = gcd
+
+
+def test_euclid() -> None:
+    ax = 42
+    bx = 30
+    r = gcd(ax, bx)
+    assert r == 6
+
+
+if __name__ == "__main__":
+    test_euclid()
+    print("Tests passed.")

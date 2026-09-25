@@ -1,5 +1,5 @@
-def GCD(a,b):
-    """Compute the GCD of two positive int."""
+def gcd(a: int, b: int) -> int:
+    """Compute the GCD of two positive integers."""
     while a != b:
         if a > b:
             a = a - b
@@ -7,7 +7,10 @@ def GCD(a,b):
             b = b - a
     return a
 
-ax = 42                 
-bx = 30                 
-result = GCD(ax, bx) # Call the GCD function
-print(result)  
+
+GCD = gcd
+
+ax = 42
+bx = 30
+result = gcd(ax, bx)
+print(result)
