@@ -262,6 +262,7 @@ __marimo__/
 *.synctex(busy)
 # LaTeX Beamer Template folder
 LaTeX Beamer Template/
+UCL 200 Template/
 
 # Content not yet released
 Week 2/
