@@ -1,18 +1,9 @@
-def test_is_in():
-    assert not is_in_binary([], 4)
-    assert is_in_binary([1], 1)
-    assert is_in_binary([1,2,3], 3)
-    assert is_in_binary([1,2,3], 2)
-    assert is_in_binary([1,2,3], 1)
-    assert is_in_binary([1,2,3,4], 4)
-    assert is_in_binary([1,2,3,4], 3)
-    assert is_in_binary([1,2,3,4], 2)
-    assert is_in_binary([1,2,3,4], 1)
-    assert is_in_binary([1,2,2,2,3], 2)
-    assert is_in_binary([2,3,4,5,6,7],3)
-    assert not is_in_binary([1,2,3,3,3,10], 4)
-
-def is_in_binary(lst, val):
+def is_in_binary(lst: list, val: object) -> bool:
+    """Simplified binary search (bisection) without TikZ rendering.
+    
+    Returns True if val is present in sorted list lst, False otherwise.
+    Complexity: O(log N) comparisons.
+    """
     if len(lst) == 0:
         return False
 
@@ -25,3 +16,23 @@ def is_in_binary(lst, val):
         else:
             end = middle
     return lst[start] == val
+
+
+def test_is_in():
+    assert not is_in_binary([], 4)
+    assert is_in_binary([1], 1)
+    assert is_in_binary([1, 2, 3], 3)
+    assert is_in_binary([1, 2, 3], 2)
+    assert is_in_binary([1, 2, 3], 1)
+    assert is_in_binary([1, 2, 3, 4], 4)
+    assert is_in_binary([1, 2, 3, 4], 3)
+    assert is_in_binary([1, 2, 3, 4], 2)
+    assert is_in_binary([1, 2, 3, 4], 1)
+    assert is_in_binary([1, 2, 2, 2, 3], 2)
+    assert is_in_binary([2, 3, 4, 5, 6, 7], 3)
+    assert not is_in_binary([1, 2, 3, 3, 3, 10], 4)
+
+
+if __name__ == "__main__":
+    test_is_in()
+    print("All binary search (binarysearch2.py) tests passed successfully!")
